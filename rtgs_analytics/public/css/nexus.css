@@ -1,0 +1,76 @@
+/* public/css/nexus.css */
+:root {
+    --bg-dark: #101214;
+    --panel-bg: #181b1f;
+    --accent-blue: #3d8bd9;
+    --text-main: #e1e1e1;
+    --border-color: #2e3338;
+}
+
+body.nexus-mode { background: var(--bg-dark); color: var(--text-main); font-family: 'Inter', sans-serif; display: flex; margin: 0; height: 100vh; overflow: hidden; }
+
+.sidebar { width: 300px; background: var(--panel-bg); height: 100%; padding: 20px; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 20px; }
+
+.nexus-logo { color: var(--accent-blue); font-weight: bold; font-size: 1.2rem; letter-spacing: 1px; margin-bottom: 20px; }
+
+.filter-group { display: flex; flex-direction: column; gap: 8px; }
+.filter-group label { font-size: 0.8rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.nexus-select, .nexus-range {
+    background: #0d1117;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.btn-nexus {
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-nexus:hover { background: #3178c6; }
+
+.content { flex: 1; display: flex; flex-direction: column; height: 100%; }
+
+.stats-ribbon {
+    height: 70px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    gap: 30px;
+    background: var(--panel-bg);
+}
+
+.stat-card { font-size: 0.9rem; color: #8b949e; }
+.stat-card span { color: var(--text-main); font-weight: bold; font-size: 1.1rem; margin-left: 8px; }
+.stat-card.warning span { color: #f44336; }
+
+.data-grid-container { flex: 1; overflow: auto; padding: 0; background: var(--bg-dark); }
+
+.nexus-table { width: 100%; border-collapse: collapse; }
+.nexus-table th { 
+    text-align: left; padding: 12px 20px; 
+    border-bottom: 2px solid var(--border-color); 
+    color: var(--accent-blue); font-size: 0.75rem; text-transform: uppercase; 
+    background: var(--panel-bg);
+    position: sticky; top: 0;
+}
+.nexus-table td { 
+    padding: 12px 20px; 
+    border-bottom: 1px solid var(--border-color); 
+    font-size: 0.85rem; 
+    color: #c9d1d9;
+}
+.nexus-table tr:hover { background: #1c2128; }
+
+.match-high { color: #4caf50; font-weight: bold; }
+.match-low { color: #f44336; }
+.badge-orphan { background: #333; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; color: #aaa; }
